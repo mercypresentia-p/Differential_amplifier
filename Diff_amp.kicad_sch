@@ -274,12 +274,9 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Simulation_SPICE:NMOS"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "Transistor_FET:IRF540N"
 			(pin_names
-				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -287,7 +284,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+				(at 5.08 1.905 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -297,8 +294,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "NMOS"
-				(at 5.08 -1.27 0)
+			(property "Value" "IRF540N"
+				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -308,8 +305,21 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
-				(at 5.08 2.54 0)
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
+				(at 5.08 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -317,20 +327,10 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(property "Description" "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -341,40 +341,7 @@
 					)
 				)
 			)
-			(property "Sim.Device" "NMOS"
-				(at 0 -17.145 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Type" "VDMOS"
-				(at 0 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Pins" "1=D 2=G 3=S"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET simulation"
+			(property "ki_keywords" "HEXFET N-Channel MOSFET"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -385,7 +352,18 @@
 					)
 				)
 			)
-			(symbol "NMOS_0_1"
+			(property "ki_fp_filters" "TO?220*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "IRF540N_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -552,11 +530,11 @@
 					)
 				)
 			)
-			(symbol "NMOS_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
+			(symbol "IRF540N_1_1"
+				(pin input line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "D"
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -571,10 +549,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
+				(pin passive line
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "G"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1136,7 +1114,7 @@
 		(at 149.86 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ba728564-2a3d-444f-a08d-0f17de77dba1")
+		(uuid "7278a98c-3bc6-4854-9637-4fe6b7a12b29")
 	)
 	(junction
 		(at 133.35 88.9)
@@ -1233,16 +1211,6 @@
 			(type default)
 		)
 		(uuid "3b63b297-99b2-449f-a251-44c27b02e3e3")
-	)
-	(wire
-		(pts
-			(xy 149.86 121.92) (xy 149.86 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ede59b6-54a8-48b0-80fe-7d7c3f281fe3")
 	)
 	(wire
 		(pts
@@ -1386,16 +1354,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 114.3) (xy 165.1 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b440713a-3fcd-4b64-9a2c-285cd0f5ee9c")
-	)
-	(wire
-		(pts
 			(xy 50.8 171.45) (xy 50.8 173.99)
 		)
 		(stroke
@@ -1443,6 +1401,16 @@
 			(type default)
 		)
 		(uuid "d5625c56-eb42-4031-aaf2-4d90f29ca49f")
+	)
+	(wire
+		(pts
+			(xy 149.86 121.92) (xy 149.86 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6d4cb34-8291-45b8-bef8-a059569f4766")
 	)
 	(wire
 		(pts
@@ -1503,6 +1471,16 @@
 			(type default)
 		)
 		(uuid "ed67bff4-ed87-4e4d-a612-c08126c1dbe1")
+	)
+	(wire
+		(pts
+			(xy 149.86 114.3) (xy 165.1 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd570425-53bb-4b33-8484-62756e1e9137")
 	)
 	(global_label "Vdd"
 		(shape input)
@@ -1918,88 +1896,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 165.1 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2c4329fa-6f19-4a0d-a1ef-c71f70f84ca3")
-		(property "Reference" "R2"
-			(at 167.64 81.2799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R"
-			(at 167.64 83.8199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 163.322 82.55 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 165.1 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "eb534575-4e3c-4236-bd5e-77d9bb89635f")
-		)
-		(pin "2"
-			(uuid "003ad9bb-3c4c-4020-82b3-d76c8236e3ef")
-		)
-		(instances
-			(project "Diff_amp"
-				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 88.9 173.99 0)
 		(unit 1)
@@ -2150,6 +2046,88 @@
 			(project "Diff_amp"
 				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 149.86 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e6554a1-e46e-45d5-8cc1-bb7cce35d79f")
+		(property "Reference" "R6"
+			(at 152.4 116.8399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 152.4 119.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal"
+			(at 148.082 118.11 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 149.86 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "53a379f8-c543-40b0-bf93-4c8bbe9cacb4")
+		)
+		(pin "2"
+			(uuid "67393445-1854-4ab7-9a77-f62d61feb0d9")
+		)
+		(instances
+			(project "Diff_amp"
+				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -2387,8 +2365,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 130.81 96.52 0)
+		(lib_id "Transistor_FET:IRF540N")
+		(at 167.64 96.52 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2396,10 +2375,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6ad25dbb-c1a7-40fc-82cc-a98abf03b401")
-		(property "Reference" "Q1"
-			(at 137.16 95.2499 0)
+		(uuid "6b0af842-046d-4e43-8c0c-88daafb023e3")
+		(property "Reference" "Q4"
+			(at 161.29 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2409,8 +2387,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NMOS"
-			(at 137.16 97.7899 0)
+		(property "Value" "IRF540N"
+			(at 161.29 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2420,8 +2398,33 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 135.89 93.98 0)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 162.56 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
+			(at 162.56 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"
+			(at 167.64 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2430,75 +2433,20 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 130.81 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 130.81 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 130.81 113.665 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 130.81 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 130.81 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "26a3d9fa-a9ac-4496-8f86-a287439d9341")
 		)
 		(pin "2"
-			(uuid "76cde71e-42e8-484b-9118-5afd5caf39fa")
+			(uuid "e3aa1c18-e31b-422d-b8df-8fc2a5f6fda4")
 		)
 		(pin "3"
-			(uuid "5c6306d3-f636-4180-82ec-e8ffe18d6424")
+			(uuid "9c44dc32-5989-40e7-840e-aff33cc33508")
+		)
+		(pin "1"
+			(uuid "b7c07732-15d4-4785-9de3-f6311cdf8125")
 		)
 		(instances
 			(project "Diff_amp"
 				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
-					(reference "Q1")
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -2576,6 +2524,94 @@
 			(project "Diff_amp"
 				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
 					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:IRF540N")
+		(at 130.81 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a898080-cf7d-405a-9e4f-693cc52f2625")
+		(property "Reference" "Q3"
+			(at 137.16 95.2499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IRF540N"
+			(at 137.16 97.7899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 135.89 98.425 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
+			(at 135.89 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"
+			(at 130.81 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "91a87844-2c3b-4b98-9c57-608b4ac530c7")
+		)
+		(pin "3"
+			(uuid "7dd714c8-e517-4f2d-9ab9-321a0a5b2ae0")
+		)
+		(pin "1"
+			(uuid "25bd0357-b34e-442a-9223-f0b635fa02db")
+		)
+		(instances
+			(project "Diff_amp"
+				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -2660,7 +2696,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 149.86 118.11 0)
+		(at 165.1 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2668,9 +2704,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a603d542-2a58-4320-88ba-5a753f329397")
-		(property "Reference" "R3"
-			(at 152.4 116.84 0)
+		(fields_autoplaced yes)
+		(uuid "91efa072-eefd-4a49-b330-cb7795287437")
+		(property "Reference" "R5"
+			(at 167.64 81.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2681,7 +2718,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 152.4 119.38 0)
+			(at 167.64 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2691,8 +2728,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 148.082 118.11 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal"
+			(at 163.322 82.55 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2703,7 +2740,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.86 118.11 0)
+			(at 165.1 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2714,7 +2751,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 149.86 118.11 0)
+			(at 165.1 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2725,15 +2762,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "475f2298-cf3c-4db0-8ffe-75222907c41f")
+			(uuid "5f5ec5ba-82a6-45a7-a5e8-394bc4f0b460")
 		)
 		(pin "2"
-			(uuid "df8ae605-1de2-4159-922f-bb28ef17e0b0")
+			(uuid "9ea633df-5812-4f76-ab88-da30f7b9b676")
 		)
 		(instances
 			(project "Diff_amp"
 				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
-					(reference "R3")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -3206,124 +3243,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 167.64 96.52 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e9b11d90-17b5-4430-8f9e-68ab56c20880")
-		(property "Reference" "Q2"
-			(at 161.29 95.2499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 161.29 97.7899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 162.56 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 167.64 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 167.64 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 167.64 113.665 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 167.64 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 167.64 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "aaec5c04-7f8a-46c7-bf68-3a0b4058838a")
-		)
-		(pin "2"
-			(uuid "1177fc76-5822-4f8c-9566-998029b97d7f")
-		)
-		(pin "3"
-			(uuid "257da977-3415-485b-a03a-b3b97ef6c634")
-		)
-		(instances
-			(project "Diff_amp"
-				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 133.35 82.55 0)
 		(unit 1)
@@ -3334,8 +3253,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "edda860c-c3cb-4868-bb20-7b627b533428")
-		(property "Reference" "R1"
+		(uuid "e25aea41-a40b-4183-b88d-f31d2f15b073")
+		(property "Reference" "R4"
 			(at 135.89 81.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3357,7 +3276,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal"
 			(at 131.572 82.55 90)
 			(hide yes)
 			(show_name no)
@@ -3391,15 +3310,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "791f7b3f-e382-40c4-af9a-78ae53acde06")
+			(uuid "00e6c109-bc16-4337-92e9-5ef560df3c0d")
 		)
 		(pin "2"
-			(uuid "156195e9-8171-4b90-bc17-176d8fc36e42")
+			(uuid "9366fce9-45f6-4f7d-8bec-f71e9d744633")
 		)
 		(instances
 			(project "Diff_amp"
 				(path "/43f1141d-a0a4-44cd-ab8a-ad8cacfe73a1"
-					(reference "R1")
+					(reference "R4")
 					(unit 1)
 				)
 			)
