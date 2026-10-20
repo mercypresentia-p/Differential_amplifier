@@ -1,0 +1,8 @@
+PCB design on Differential Amplifier
+
+1. Analyze the circuit on LT Spice.
+2. Draw the schematics with appropriate labels and power flag.
+3. After completing the schematics, open the pcb editor and upload the schematics.
+4. Do the annotations and run ERC
+5. Place the components acc to the need and route the trace in such a way tht 2 traces does not overlap.
+6. After routing, run ERC. If no errors, get the Gerber file and zip it, then send this Gerber file to the manufacturer. 

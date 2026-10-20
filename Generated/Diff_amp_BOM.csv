@@ -1,0 +1,4 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet"
+"J1,J2,J3,J4,J5,J6,J7,J8,J9,J10","10","Conn_01x01","","","","Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical",""
+"Q1,Q2","2","IRF540N","","","","Package_TO_SOT_THT:TO-220-3_Vertical","http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
+"R1,R2,R3","3","R","","","","Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal",""

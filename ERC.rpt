@@ -1,0 +1,20 @@
+ERC report (2026-10-06T12:02:09, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[multiple_net_names]: Both Vdd and +5V are attached to the same items; Vdd will be used in the netlist
+    ; warning
+    @(82.55 mm, 45.72 mm): Global Label 'Vdd'
+    @(254.00 mm, 29.21 mm): Symbol #PWR01 Pin 1 [Power input, Line]
+[multiple_net_names]: Both Vss and -5V are attached to the same items; Vss will be used in the netlist
+    ; warning
+    @(267.97 mm, 36.83 mm): Global Label 'Vss'
+    @(267.97 mm, 29.21 mm): Symbol #PWR02 Pin 1 [Power input, Line]
+
+ ** ERC messages: 2  Errors 0  Warnings 2
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

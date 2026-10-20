@@ -1153,6 +1153,16 @@
 		)
 		(uuid "3656eefe-b62a-4e03-beaa-727372ad120b")
 	)
+	(text "Differential Amplifier\n"
+		(exclude_from_sim no)
+		(at 204.47 189.23 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "3b98abff-a8ce-4572-b300-42de46a6f161")
+	)
 	(text "Output "
 		(exclude_from_sim no)
 		(at 262.89 109.22 0)
@@ -1212,6 +1222,16 @@
 			)
 		)
 		(uuid "c18dca6f-d94a-4d1e-a9c4-80583f41fad0")
+	)
+	(text "Mercy Presentia P 25BLC1150\n\n"
+		(exclude_from_sim no)
+		(at 229.87 179.07 0)
+		(effects
+			(font
+				(size 4 4)
+			)
+		)
+		(uuid "ec229b52-91d0-4e15-aa35-6918ed75cceb")
 	)
 	(junction
 		(at 165.1 88.9)
